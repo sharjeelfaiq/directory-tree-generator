@@ -22,8 +22,9 @@ A blazing-fast PowerShell script that generates a comprehensive directory tree w
 ## 🔧 Installation
 
 ```bash
-git clone https://github.com/your-username/high-perf-tree-generator.git
-cd high-perf-tree-generator
+git clone https://github.com/your-username/directory-tree-generator.git
+cd directory-tree-generator
+cp .\GenerateTree.ps1 C:\Path\To\Your\Project
 ```
 
 > Ensure you're running PowerShell 5.1 or PowerShell 7+ (`$PSVersionTable.PSVersion`).
