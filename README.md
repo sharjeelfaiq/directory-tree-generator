@@ -24,7 +24,7 @@ A blazing-fast PowerShell script that generates a comprehensive directory tree w
 ```bash
 git clone https://github.com/your-username/directory-tree-generator.git
 cd directory-tree-generator
-cp ./index.ps1 -Path "C:\Path\To\Your\Project"
+./index.ps1 -Path "C:\Path\To\Your\Project"
 ```
 
 > Ensure you're running PowerShell 5.1 or PowerShell 7+ (`$PSVersionTable.PSVersion`).
