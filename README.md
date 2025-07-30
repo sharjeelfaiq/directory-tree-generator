@@ -6,21 +6,6 @@ A blazing-fast PowerShell script that generates a comprehensive directory tree w
 
 ---
 
-## 📚 Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Parameters](#parameters)
-- [Examples](#examples)
-- [Advanced Options](#advanced-options)
-- [Compatibility](#compatibility)
-- [Performance Tips](#performance-tips)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## 🚀 Features
 
 - ⚡ **Streaming Output** – Processes and writes huge directory trees incrementally.
