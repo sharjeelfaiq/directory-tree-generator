@@ -24,7 +24,7 @@ A blazing-fast PowerShell script that generates a comprehensive directory tree w
 ```bash
 git clone https://github.com/your-username/directory-tree-generator.git
 cd directory-tree-generator
-cp .\GenerateTree.ps1 C:\Path\To\Your\Project
+cp ./index.ps1 -Path "C:\Path\To\Your\Project"
 ```
 
 > Ensure you're running PowerShell 5.1 or PowerShell 7+ (`$PSVersionTable.PSVersion`).
@@ -34,7 +34,7 @@ cp .\GenerateTree.ps1 C:\Path\To\Your\Project
 ## 📌 Usage
 
 ```powershell
-.\GenerateTree.ps1 [-Path] <String> [Other Options...]
+.\index.ps1 [-Path] <String> [Other Options...]
 ```
 
 By default, it scans the current directory and outputs a Markdown tree to `directory_tree.md`.
@@ -63,22 +63,22 @@ By default, it scans the current directory and outputs a Markdown tree to `direc
 
 ### Basic Markdown Tree
 ```powershell
-.\GenerateTree.ps1
+.\index.ps1
 ```
 
 ### Limit Depth and Filter by Extension
 ```powershell
-.\GenerateTree.ps1 -Path C:\Repos -MaxDepth 3 -FileExtensionFilter ".ps1"
+.\index.ps1 -Path C:\Repos -MaxDepth 3 -FileExtensionFilter ".ps1"
 ```
 
 ### Output in JSON Format
 ```powershell
-.\GenerateTree.ps1 -Path . -OutputFormat JSON -OutputFile tree.json
+.\index.ps1 -Path . -OutputFormat JSON -OutputFile tree.json
 ```
 
 ### Parallel Processing with Streaming and Stats
 ```powershell
-.\GenerateTree.ps1 -UseParallel -StreamOutput -IncludeStats -ShowProgress
+.\index.ps1 -UseParallel -StreamOutput -IncludeStats -ShowProgress
 ```
 
 ---
