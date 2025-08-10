@@ -43,40 +43,44 @@ By default, it scans the current directory and outputs a Markdown tree to `direc
 
 ## 🛠️ Parameters
 
-| Parameter             | Type      | Description                                                                 |
-|-----------------------|-----------|-----------------------------------------------------------------------------|
-| `-Path`               | `String`  | Root directory to scan. Defaults to current location.                       |
-| `-MaxDepth`           | `Int`     | Recursion depth limit (1–50). Unlimited by default.                        |
-| `-FileExtensionFilter`| `String`  | Only include files with this extension (e.g. `.ps1`).                      |
-| `-OutputFile`         | `String`  | Path to the output file. Default: `directory_tree.md`.                     |
-| `-ExcludePatterns`    | `String[]`| Regex patterns to exclude files or folders (e.g. `'^node_modules$'`).     |
-| `-ShowProgress`       | `Switch`  | Displays a progress bar while scanning.                                    |
-| `-IncludeStats`       | `Switch`  | Appends file and directory count + size stats.                             |
-| `-UseParallel`        | `Switch`  | Enables multi-threaded directory traversal (requires PowerShell 7+).       |
-| `-StreamOutput`       | `Switch`  | Outputs incrementally to disk (recommended for large trees).               |
-| `-OutputFormat`       | `String`  | Format: `Markdown`, `PlainText`, `JSON`, `XML`. Default: `Markdown`.      |
-| `-MaxFileSize`        | `Int`     | Skip files over this size (in MB). Default: `100`.                         |
+| Parameter              | Type       | Description                                                           |
+| ---------------------- | ---------- | --------------------------------------------------------------------- |
+| `-Path`                | `String`   | Root directory to scan. Defaults to current location.                 |
+| `-MaxDepth`            | `Int`      | Recursion depth limit (1–50). Unlimited by default.                   |
+| `-FileExtensionFilter` | `String`   | Only include files with this extension (e.g. `.ps1`).                 |
+| `-OutputFile`          | `String`   | Path to the output file. Default: `directory_tree.md`.                |
+| `-ExcludePatterns`     | `String[]` | Regex patterns to exclude files or folders (e.g. `'^node_modules$'`). |
+| `-ShowProgress`        | `Switch`   | Displays a progress bar while scanning.                               |
+| `-IncludeStats`        | `Switch`   | Appends file and directory count + size stats.                        |
+| `-UseParallel`         | `Switch`   | Enables multi-threaded directory traversal (requires PowerShell 7+).  |
+| `-StreamOutput`        | `Switch`   | Outputs incrementally to disk (recommended for large trees).          |
+| `-OutputFormat`        | `String`   | Format: `Markdown`, `PlainText`, `JSON`, `XML`. Default: `Markdown`.  |
+| `-MaxFileSize`         | `Int`      | Skip files over this size (in MB). Default: `100`.                    |
 
 ---
 
 ## 📋 Examples
 
 ### Basic Markdown Tree
+
 ```powershell
 .\index.ps1
 ```
 
 ### Limit Depth and Filter by Extension
+
 ```powershell
 .\index.ps1 -Path C:\Repos -MaxDepth 3 -FileExtensionFilter ".ps1"
 ```
 
 ### Output in JSON Format
+
 ```powershell
 .\index.ps1 -Path . -OutputFormat JSON -OutputFile tree.json
 ```
 
 ### Parallel Processing with Streaming and Stats
+
 ```powershell
 .\index.ps1 -UseParallel -StreamOutput -IncludeStats -ShowProgress
 ```
@@ -102,10 +106,10 @@ By default, it scans the current directory and outputs a Markdown tree to `direc
 ## 💻 Compatibility
 
 | Feature             | PowerShell 5.1 | PowerShell 7+ |
-|---------------------|----------------|----------------|
-| Core functionality  | ✅             | ✅             |
-| Parallel processing | ❌             | ✅             |
-| Streaming output    | ✅             | ✅             |
+| ------------------- | -------------- | ------------- |
+| Core functionality  | ✅             | ✅            |
+| Parallel processing | ❌             | ✅            |
+| Streaming output    | ✅             | ✅            |
 
 > 📝 Recommend PowerShell 7+ for best performance and compatibility.
 
@@ -119,6 +123,10 @@ By default, it scans the current directory and outputs a Markdown tree to `direc
 - On SSDs or fast NVMe drives, parallel mode can yield **3-5x** speedup.
 
 ---
+
+## TODO
+
+- [ ] Turn this into an open-source project on GitHub.
 
 ## 🤝 Contributing
 
